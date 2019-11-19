@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">App_Kesehatan</string>
+    <string name="dinas_kesehatan_kota_malang">Dinas Kesehatan Kota Malang</string>
+    <string name="pencatatan_kesehatan">Pencatatan Kesehatan</string>
+    <string name="sistem_informasi">Sistem Informasi</string>
+    <string name="logo">logo</string>
+    <string name="Kecamatan">Kecamatan</string>
+    <string name="KecamatanText">Kecamatan:</string>
+    <string name="masukkan_data">Masukkan Data</string>
+    <string name="nama_yang_sakit">Nama Yang Sakit:</string>
+    <string name="Kecamatan_A">Kecamatan</string>
+    <string name="Kelurahan">Kelurahan:</string>
+    <string name="jalan">Jalan:</string>
+    <string name="status">Status:</string>
+    <string name="jenisStatus">Sehat atau Prasehat atau Sakit</string>
+    <string name="keterangan">Keterangan:</string>
+    <string name="simpan">Simpan</string>
 </resources>
