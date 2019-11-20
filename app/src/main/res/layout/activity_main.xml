@@ -74,7 +74,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    android:background="#9fdf9f"
+    android:background="#"
     android:layout_marginTop="0dp">
 
     <TextView
@@ -125,7 +125,7 @@
         android:background="@drawable/buttonmenu"
         android:layout_marginTop="90dp"
         android:layout_gravity="center"
-        android:borderSize="10dp">
+        >
 
         <TextView
             android:id="@+id/lihatdatatxt"
