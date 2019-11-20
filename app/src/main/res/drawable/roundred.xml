@@ -5,9 +5,7 @@
     <solid
         android:color="#ff1a1a"></solid>
     // The width and color of the border
-    <stroke
-        android:width=""
-        android:color="" />
+
 
     // The desired corner radius. reduce it to keep it less rounded
     <corners android:radius="500dp" />
