@@ -14,7 +14,7 @@
             android:background="#9fdf9f"
             android:layout_marginTop="0dp">
             <ImageView
-                android:id="@+id/logo"
+
                 android:src="@drawable/baktihusada"
                 android:layout_height="120dp"
                 android:layout_width="90dp"
@@ -22,7 +22,7 @@
                 android:layout_marginLeft="15dp"/>
 
             <TextView
-                android:id="@+id/sisinfo"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -35,7 +35,7 @@
 
 
             <TextView
-                android:id="@+id/pencatatan"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -47,7 +47,7 @@
                 android:textSize="23dp" />
 
             <TextView
-                android:id="@+id/dinkes"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -60,13 +60,21 @@
 
         </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/batas"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="vertical"
+        android:background="#339933"
+        android:layout_marginTop="0dp">
+    </LinearLayout>
 <LinearLayout
     android:id="@+id/menuutama"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#9fdf9f"
-    android:layout_marginTop="0dp"
+    android:background=""
+    android:layout_marginTop="0dp">
     <TextView
         android:id="@+id/menujudul"
         android:layout_width="wrap_content"
