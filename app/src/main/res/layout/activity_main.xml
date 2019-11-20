@@ -73,8 +73,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background=""
+
+    android:background="#9fdf9f"
     android:layout_marginTop="0dp">
+
     <TextView
         android:id="@+id/menujudul"
         android:layout_width="wrap_content"
