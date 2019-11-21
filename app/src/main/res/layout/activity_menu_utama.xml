@@ -82,7 +82,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
         android:fontFamily="sans-serif-medium"
-        android:text="MENU"
+        android:text="MENU UTAMA"
         android:textColor="#fff"
         android:textSize="30dp"/>
 

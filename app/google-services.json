@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "747322648245",
+    "firebase_url": "https://appkesehatan.firebaseio.com",
+    "project_id": "appkesehatan",
+    "storage_bucket": "appkesehatan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747322648245:android:5b0882ac890c47924300fc",
+        "android_client_info": {
+          "package_name": "com.example.app_kesehatan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747322648245-bj4fbiephbj4ngrr7k7dc0au9j897abi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app_kesehatan",
+            "certificate_hash": "3c011d5e735d48e9bd78b5f9c11b5880dbd9f56b"
+          }
+        },
+        {
+          "client_id": "747322648245-apd8fc6kk6eq2veg5n1j54gcv6kt09ve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWetzCR0Gg6W1CJ3HeuToyh0OM_-1LcSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747322648245-apd8fc6kk6eq2veg5n1j54gcv6kt09ve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
