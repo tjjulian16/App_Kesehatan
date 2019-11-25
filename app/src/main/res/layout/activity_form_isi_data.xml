@@ -65,133 +65,160 @@
         <TextView
             android:id="@+id/form"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="@string/masukkan_data"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
+            android:gravity="center"
+
             android:textAlignment="center"
-            android:background="@color/back"
-            android:textColor="@color/hitam"
+            android:background="#339933"
+            android:textColor="@color/putih"
             android:textSize="20sp"/>
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/namaKeluarga"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nama_yang_sakit"
-            android:textColor="@color/hitam"
-            android:textSize="15sp"
-            android:paddingBottom="5dp"/>
+            android:padding="10dp">
 
-        <EditText
-            android:id="@+id/inputNamaKeluarga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/namaKeluarga"
-            android:background="@android:drawable/editbox_dropdown_light_frame"/>
+            <TextView
+                android:id="@+id/namaKeluarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nama_yang_sakit"
+                android:textColor="@color/hitam"
+                android:textSize="15sp"
+                android:paddingBottom="5dp"/>
 
-        <TextView
-            android:id="@+id/kecamatan"
-            android:layout_below="@id/inputNamaKeluarga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/KecamatanText"
-            android:textColor="@color/hitam"
-            android:textSize="15sp"
-            android:paddingBottom="5dp"/>
+            <EditText
+                android:id="@+id/inputNamaKeluarga"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:hint="Nama Kepala Keluarga"
+                android:layout_below="@id/namaKeluarga"
+                android:background="@android:drawable/editbox_dropdown_light_frame"/>
 
-        <Spinner
-            android:id="@+id/spnKecamatan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/kecamatan"
-            android:entries="@array/kecamatan_array"
-            android:prompt="@string/Kecamatan_A" />
+            <TextView
+                android:id="@+id/kecamatan"
+                android:layout_below="@id/inputNamaKeluarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="@string/KecamatanText"
+                android:textColor="@color/hitam"
+                android:textSize="15sp"
+                android:paddingBottom="5dp"/>
 
-        <TextView
-            android:id="@+id/kelurahan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Kelurahan"
-            android:layout_below="@id/spnKecamatan"
-            android:textColor="@color/hitam"
-            android:textSize="15sp"
-            android:paddingBottom="5dp"/>
+            <Spinner
+                android:id="@+id/spnKecamatan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
 
-        <Spinner
-            android:id="@+id/spnKelurahan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/kelurahan"
-            android:entries="@array/kelurahan_array" />
+                android:layout_below="@id/kecamatan"
+                android:entries="@array/kecamatan_array"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:prompt="@string/Kecamatan_A" />
 
-        <TextView
-            android:id="@+id/Alamat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Alamat"
-            android:layout_below="@id/spnKelurahan"
-            android:textColor="@color/hitam"
-            android:textSize="15sp"
-            android:paddingBottom="5dp"/>
+            <TextView
+                android:id="@+id/kelurahan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Kelurahan"
+                android:layout_below="@id/spnKecamatan"
+                android:textColor="@color/hitam"
+                android:textSize="15sp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="15dp"/>
 
-        <EditText
-            android:id="@+id/inputAlamat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Alamat"
-            android:background="@android:drawable/editbox_dropdown_light_frame"/>
+            <Spinner
+                android:id="@+id/spnKelurahan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
 
-        <TextView
-            android:id="@+id/status"
-            android:layout_below="@id/inputAlamat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/status"
-            android:textColor="@color/hitam"
-            android:textSize="15sp"
-            android:paddingBottom="5dp"/>
+                android:layout_below="@id/kelurahan"
+                android:entries="@array/kelurahan_array"
+                android:background="@android:drawable/editbox_dropdown_light_frame"/>
 
-        <Spinner
-            android:id="@+id/spnStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/status"
-            android:entries="@array/listStatus"
-            android:prompt="@string/jenisStatus" />
+            <TextView
+                android:id="@+id/Alamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Alamat"
+                android:layout_below="@id/spnKelurahan"
+                android:textColor="@color/hitam"
+                android:textSize="15sp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="15dp"/>
 
-        <TextView
-            android:id="@+id/ket"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/keterangan"
-            android:layout_below="@id/spnStatus"
-            android:textColor="@color/hitam"
-            android:textSize="15sp"
-            android:paddingBottom="5dp"/>
+            <EditText
+                android:id="@+id/inputAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:layout_below="@id/Alamat"
+                android:hint="Alamat lokasi keluarga"
 
-        <EditText
-            android:id="@+id/inputKeterangan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/ket"
-            android:background="@android:drawable/editbox_dropdown_light_frame"/>
+                android:background="@android:drawable/editbox_dropdown_light_frame"/>
 
-        <Button
-            android:id="@+id/buttonSimpan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/inputKeterangan"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="10dip"
-            android:text="@string/simpan" />
+            <TextView
+                android:id="@+id/status"
+                android:layout_below="@id/inputAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                android:textColor="@color/hitam"
+                android:textSize="15sp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="15dp"/>
 
-    </RelativeLayout>
+            <Spinner
+                android:id="@+id/spnStatus"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:layout_below="@id/status"
+                android:entries="@array/listStatus"
+                android:background="@android:drawable/editbox_dropdown_light_frame"
+                android:prompt="@string/jenisStatus" />
+
+            <TextView
+                android:id="@+id/ket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/keterangan"
+                android:layout_below="@id/spnStatus"
+                android:textColor="@color/hitam"
+                android:textSize="15sp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="15dp"/>
+
+            <EditText
+                android:id="@+id/inputKeterangan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:padding="10dp"
+                android:layout_below="@id/ket"
+                android:hint="Keterangan terkait data kesehatan"
+                android:background="@android:drawable/editbox_dropdown_light_frame"/>
+
+            <Button
+                android:id="@+id/buttonSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inputKeterangan"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/buttonmenu"
+                android:gravity="center"
+                android:text="@string/simpan"
+                android:textColor="@color/putih" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
 
 </LinearLayout>

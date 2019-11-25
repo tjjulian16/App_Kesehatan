@@ -63,10 +63,21 @@
     <LinearLayout
         android:id="@+id/batas"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="40dp"
         android:orientation="vertical"
         android:background="#339933"
         android:layout_marginTop="0dp">
+
+        <TextView
+            android:id="@+id/menujudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="MENU UTAMA"
+            android:textColor="#fff"
+            android:textSize="30dp"/>
     </LinearLayout>
 <LinearLayout
     android:id="@+id/menuutama"
@@ -75,16 +86,7 @@
     android:orientation="vertical"
     android:layout_marginTop="0dp">
 
-    <TextView
-        android:id="@+id/menujudul"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="MENU UTAMA"
-        android:textColor="#fff"
-        android:textSize="30dp"/>
+
 
     <RelativeLayout
         android:id="@+id/buttonMenuIsiData"

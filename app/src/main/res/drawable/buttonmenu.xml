@@ -3,7 +3,7 @@
     android:shape="rectangle"
     >
 <solid
-    android:color="#9fdf9f"></solid>
+    android:color="#62c462"></solid>
     // The width and color of the border
     <stroke
         android:width="2dp"

@@ -33,13 +33,13 @@ public class MenuUtama extends AppCompatActivity {
             }
         });
 
-     /*   menuLihatData.setOnClickListener(new View.OnClickListener() {
+        menuLihatData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MenuUtama.this, lihatData.class);
+                Intent i = new Intent(MenuUtama.this, lihatKecamatan.class);
                 startActivity(i);
             }
-        }); */
+        });
 
 
         btnLogout.setOnClickListener(new View.OnClickListener() {

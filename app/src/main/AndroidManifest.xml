@@ -20,6 +20,9 @@
         <activity android:name=".MenuUtama" />
         <activity android:name=".formIsiData" />
         <activity android:name=".dataKesehatan" />
+        <activity android:name=".inputBerhasil" />
+        <activity android:name=".lihatKecamatan" />
+        <activity android:name=".lihatKelurahan" />
     </application>
 
 </manifest>

@@ -8,9 +8,9 @@
     <string name="KecamatanText">Kecamatan:</string>
     <string name="masukkan_data">Masukkan Data</string>
     <string name="nama_yang_sakit">Nama Keluarga:</string>
-    <string name="Kecamatan_A">Kecamatan</string>
+    <string name="Kecamatan_A">Kalecamatan</string>
     <string name="Kelurahan">Kelurahan:</string>
-    <string name="Alamat">Jalan:</string>
+    <string name="Alamat">Alamat Keluarga:</string>
     <string name="status">Status:</string>
     <array name="listStatus">
         <item>Sehat</item>
