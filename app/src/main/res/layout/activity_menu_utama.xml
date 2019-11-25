@@ -87,6 +87,7 @@
         android:textSize="30dp"/>
 
     <RelativeLayout
+        android:id="@+id/buttonMenuIsiData"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:background="@drawable/buttonmenu"
@@ -118,6 +119,7 @@
 </RelativeLayout>
 
     <RelativeLayout
+
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:background="@drawable/buttonmenu"

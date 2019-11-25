@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="jenis_status_array">sehat, prasehat, sakit</string-array>
-    <string-array name="kecamatan_array">blimbing, sukun, klojen, kedungkandang, lowokwaru
-    </string-array>
+    <string-array name="jenis_status_array">Sehat, Prasehat, Tidak Sehat </string-array>
+    <array name="kecamatan_array">
+        <item>Blimbing</item>
+    </array>
+    <array name="kelurahan_array">
+        <item>Jatimulyo</item>
+        <item>Lowokwaru</item>
+        <item>Tulusrejo</item>
+        <item>Mojolangu</item>
+        <item>Tasikmadu</item>
+        <item>Tunggulwulung</item>
+        <item>Dinoyo</item>
+        <item>Merjosari</item>
+        <item>Tlogomas</item>
+        <item>Sumbersari</item>
+        <item>Ketawanggede</item>
+        <item>Tunjungsekar</item>
+    </array>
+
 </resources>

@@ -7,12 +7,18 @@
     <string name="Kecamatan">Kecamatan</string>
     <string name="KecamatanText">Kecamatan:</string>
     <string name="masukkan_data">Masukkan Data</string>
-    <string name="nama_yang_sakit">Nama Yang Sakit:</string>
+    <string name="nama_yang_sakit">Nama Keluarga:</string>
     <string name="Kecamatan_A">Kecamatan</string>
     <string name="Kelurahan">Kelurahan:</string>
-    <string name="jalan">Jalan:</string>
+    <string name="Alamat">Jalan:</string>
     <string name="status">Status:</string>
+    <array name="listStatus">
+        <item>Sehat</item>
+        <item>Pra Sehat</item>
+        <item>Tidak Sehat</item>
+    </array>
     <string name="jenisStatus">Sehat atau Prasehat atau Sakit</string>
     <string name="keterangan">Keterangan:</string>
     <string name="simpan">Simpan</string>
+
 </resources>
