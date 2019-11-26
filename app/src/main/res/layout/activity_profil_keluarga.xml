@@ -121,10 +121,11 @@
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/txt_nama_keluarga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:layout_alignParentRight="true"
+                android:text="Nama Kelaurga" />
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
