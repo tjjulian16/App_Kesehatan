@@ -116,7 +116,7 @@
 </RelativeLayout>
 
     <RelativeLayout
-
+        android:id="@+id/buttonLihatData"
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:background="@drawable/buttonmenu"

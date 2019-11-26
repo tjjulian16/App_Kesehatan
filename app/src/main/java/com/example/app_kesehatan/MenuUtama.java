@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MenuUtama extends AppCompatActivity {
 
     Button btnLogout;
-     ImageView menuIsiData,menuLihatData;
+     RelativeLayout menuIsiData,menuLihatData;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
@@ -22,8 +23,8 @@ public class MenuUtama extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_utama);
         btnLogout = findViewById(R.id.btnLogout);
-        menuIsiData = findViewById(R.id.masukdataimg);
-        menuLihatData = findViewById(R.id.lihatdataimg);
+        menuIsiData = findViewById(R.id.buttonMenuIsiData);
+        menuLihatData = findViewById(R.id.buttonLihatData);
 
         menuIsiData.setOnClickListener(new View.OnClickListener() {
             @Override
