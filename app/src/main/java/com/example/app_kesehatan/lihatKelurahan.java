@@ -25,18 +25,18 @@ public class lihatKelurahan extends AppCompatActivity {
 
     private void showRecyclerList(){
         rvKelurahan.setLayoutManager(new LinearLayoutManager(this));
-        listKelurahanAdapter adapterKelurahan = new listKelurahanAdapter(list);
+        cardKelurahanAdapter adapterKelurahan = new cardKelurahanAdapter(list);
         rvKelurahan.setAdapter(adapterKelurahan);
 
-        adapterKelurahan.setOnItemClickCallback(new listKelurahanAdapter.OnItemClickCallback() {
+      /*  adapterKelurahan.setOnItemClickCallback(new cardKelurahanAdapter.OnItemClickCallback() {
             @Override
             public void onItemClicked(dataKesehatan data) {
                 showKelurahan(data);
             }
-        }); 
+        }); */
     }
 
-    private void showKelurahan(dataKesehatan datakesehatan) {
+  /*  private void showKelurahan(dataKesehatan datakesehatan) {
         Toast.makeText(this, "Kamu memilih " + datakesehatan.getKelurahan(), Toast.LENGTH_SHORT).show();
-    }
+    } */
 }
