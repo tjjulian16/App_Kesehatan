@@ -104,7 +104,7 @@
         android:layout_marginTop="0dp">
 
         <RelativeLayout
-            android:id="@+id/btnkecamatanBlimbing"
+            android:id="@+id/btnKecamatanLowokwaru"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/buttonmenu"
@@ -127,7 +127,7 @@
                 android:textSize="20dp" />
         </RelativeLayout>
         <RelativeLayout
-            android:id="@+id/btnkecamatan2"
+            android:id="@+id/btnKecamatanBlimbing"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="@drawable/buttonmenu"
@@ -150,7 +150,7 @@
                 android:textSize="20dp" />
         </RelativeLayout>
         <RelativeLayout
-            android:id="@+id/btnkecamatan3"
+            android:id="@+id/btnKecamatanKlojen"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="@drawable/buttonmenu"
@@ -173,7 +173,7 @@
                 android:textSize="20dp" />
         </RelativeLayout>
         <RelativeLayout
-            android:id="@+id/btnkecamatan4"
+            android:id="@+id/btnKecamatanSukun"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="@drawable/buttonmenu"
@@ -196,7 +196,7 @@
                 android:textSize="20dp" />
         </RelativeLayout>
         <RelativeLayout
-            android:id="@+id/btnkecamatan5"
+            android:id="@+id/btnKecamatanKedungkandang"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="@drawable/buttonmenu"

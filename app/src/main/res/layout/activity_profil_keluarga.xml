@@ -91,10 +91,22 @@
             android:textSize="20sp" />
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/detail_keluarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/hitam"
+        android:text="Detail Profil" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -103,10 +115,12 @@
             android:background="@drawable/background_umum">
 
             <TextView
-                android:id="@+id/lihat_nama_keluarga"
+                android:id="@+id/nama_keluarga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textSize="15sp"
+                android:textColor="@color/hitam"
+                android:text="Nama Keluarga:" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
