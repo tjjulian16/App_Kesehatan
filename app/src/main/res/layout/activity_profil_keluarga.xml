@@ -108,20 +108,25 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@drawable/background_umum">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/nama_keluarga"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15sp"
+                android:text="Nama Keluarga:"
                 android:textColor="@color/hitam"
-                android:text="Nama Keluarga:" />
-        </LinearLayout>
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+        </RelativeLayout>
+
     </androidx.cardview.widget.CardView>
 
 
