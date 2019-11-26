@@ -1,42 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/constraintLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="15dp"
+android:layout_marginRight="30dp"
+android:layout_marginLeft="30dp">
+
+<ImageView
+    android:id="@+id/imageView"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@drawable/fam_pict"/>
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:layout_marginLeft="8dp"
+    android:layout_gravity="center">
 
-    <ImageView
-        android:id="@+id/img_foto_keluarga"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        app:srcCompat="@drawable/fam_pict" />
+    <TextView
+        android:id="@+id/nama_keluarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:hint="Nama Keluarganya"/>
 
+    <TextView
+        android:id="@+id/alamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:textSize="10sp"
+        android:hint="Perumahan Taman Safari"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toEndOf="@id/img_foto_keluarga"
-        android:layout_toRightOf="@id/img_foto_keluarga"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/lis_nama_keluarga"
-            android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            tools:text="Nama Keluarga" />
-        <TextView
-            android:id="@+id/list_alamat"
-            android:layout_width="match_parent"
+            android:backgroundTint="@color/edit"
+            android:drawableLeft="@drawable/ic_edit"
+            android:fontFamily="sans-serif"
+            android:text="Edit"
+            android:textColor="@color/putih"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnHapus"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="3"
-            tools:text="Alamat" />
+            android:backgroundTint="@color/hapus"
+            android:drawableLeft="@drawable/ic_delete"
+            android:fontFamily="sans-serif"
+            android:text="Hapus"
+            android:textColor="@color/putih"
+            android:textSize="10sp" />
+
     </LinearLayout>
-</RelativeLayout>
+
+</LinearLayout>
+</LinearLayout>
+</LinearLayout>

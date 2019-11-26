@@ -7,5 +7,7 @@
     <color name="back">#9fdf9f</color>
     <color name="putih">#FFFFFF</color>
     <color name="hitam">#000000</color>
+    <color name="edit">#009688</color>
+    <color name="hapus">#F44336</color>
     <color name="background">#000000</color>
 </resources>
