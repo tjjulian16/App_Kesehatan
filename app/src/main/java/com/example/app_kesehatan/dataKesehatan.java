@@ -16,6 +16,30 @@ public class dataKesehatan {
         this.alamat = alamat;
     }
 
+    public void setNamaKeluarga(String namaKeluarga) {
+        this.namaKeluarga = namaKeluarga;
+    }
+
+    public void setKecamatan(String kecamatan) {
+        this.kecamatan = kecamatan;
+    }
+
+    public void setKelurahan(String kelurahan) {
+        this.kelurahan = kelurahan;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setKeterangan(String keterangan) {
+        this.keterangan = keterangan;
+    }
+
+    public void setAlamat(String alamat) {
+        this.alamat = alamat;
+    }
+
     public String getNamaKeluarga() {
         return namaKeluarga;
     }

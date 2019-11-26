@@ -9,15 +9,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class lihatKecamatan extends AppCompatActivity {
 
-    RelativeLayout buttonBlimbing;
+    RelativeLayout buttonKecamatan;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_kecamatan);
 
-        buttonBlimbing = findViewById(R.id.btnkecamatanBlimbing);
+        buttonKecamatan = findViewById(R.id.btnKecamatanLowokwaru);
 
-        buttonBlimbing.setOnClickListener(new View.OnClickListener() {
+        buttonKecamatan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(lihatKecamatan.this, lihatKelurahan.class);
