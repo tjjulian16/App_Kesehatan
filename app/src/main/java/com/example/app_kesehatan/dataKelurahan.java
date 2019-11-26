@@ -8,6 +8,7 @@ public class dataKelurahan {
             "Jatimulyo",
             "Ketawanggede",
             "Lowokwaru",
+            "Merjosari",
             "Mojolangu",
             "Sumbersari",
             "Tasikmadu",
