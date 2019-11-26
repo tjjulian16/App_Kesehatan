@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_umum">
 
@@ -101,34 +103,175 @@
         android:textColor="@color/hitam"
         android:text="Detail Profil" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="30dp"
+            app:card_viewcardElevation="16dp">
 
-            <TextView
-                android:id="@+id/nama_keluarga"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nama Keluarga:"
-                android:textColor="@color/hitam"
-                android:textSize="15sp" />
+                android:padding="20dp">
 
-            <TextView
-                android:id="@+id/txt_nama_keluarga"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="Nama Kelaurga" />
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/namaKeluarga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:text="@string/nama_yang_sakit"
+                    android:textColor="@color/hitam"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
 
-    </androidx.cardview.widget.CardView>
+                <!--isi nama-->
+                <TextView
+                    android:id="@+id/isi_nama_keluarga"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/namaKeluarga"
+                    android:hint="Nama Kepala Keluarga"
+                    android:padding="10dp"
+                    android:background="@android:drawable/editbox_dropdown_light_frame"/>
+
+                <TextView
+                    android:id="@+id/kecamatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/isi_nama_keluarga"
+                    android:layout_marginTop="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/KecamatanText"
+                    android:textColor="@color/hitam"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
+
+                <!--isi kecamatan-->
+                <TextView
+                    android:id="@+id/isi_kecamatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/kecamatan"
+                    android:hint="Kecamatan Lowokwaru"
+                    android:padding="10dp"
+                    android:background="@android:drawable/editbox_dropdown_light_frame"/>
 
 
+                <TextView
+                    android:id="@+id/kelurahan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/isi_kecamatan"
+                    android:layout_marginTop="15dp"
+                    android:paddingBottom="5dp"
+                    android:textStyle="bold"
+                    android:text="@string/Kelurahan"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp" />
+
+                <!--isi kelurahan-->
+                <TextView
+                    android:id="@+id/isi_kelurahan"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/kelurahan"
+                    android:hint="Kelurahan Jatimulyo"
+                    android:padding="10dp"
+                    android:background="@android:drawable/editbox_dropdown_light_frame"/>
+
+                <TextView
+                    android:id="@+id/alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/isi_kelurahan"
+                    android:layout_marginTop="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/Alamat"
+                    android:textStyle="bold"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp" />
+
+                <!--isi alamat-->
+                <TextView
+                    android:id="@+id/isi_alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/alamat"
+                    android:hint="Perum Griya Shanta"
+                    android:padding="10dp"
+                    android:background="@android:drawable/editbox_dropdown_light_frame"/>
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/isi_alamat"
+                    android:layout_marginTop="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/status"
+                    android:textStyle="bold"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp" />
+
+                <!--isi statuts-->
+                <TextView
+                    android:id="@+id/isi_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/status"
+                    android:hint="Sehat dong"
+                    android:padding="10dp"
+                    android:background="@android:drawable/editbox_dropdown_light_frame"/>
+
+                <TextView
+                    android:id="@+id/ket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/isi_status"
+                    android:layout_marginTop="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/keterangan"
+                    android:textStyle="bold"
+                    android:textColor="@color/hitam"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/isi_ket"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/ket"
+                    android:hint="Sehat dong"
+                    android:padding="10dp"
+                    android:background="@android:drawable/editbox_dropdown_light_frame"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            app:cardCornerRadius="30dp"
+            app:card_viewcardElevation="16dp">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map_keluarga"
+                android:layout_width="350dp"
+                android:layout_height="200dp"/>
+        </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
