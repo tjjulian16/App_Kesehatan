@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class dataKelurahan {
 
     private static String[] namaKelurahan = {
-
             "Dinoyo",
             "Jatimulyo",
             "Ketawanggede",
@@ -22,7 +21,7 @@ public class dataKelurahan {
         ArrayList<dataKesehatan> list = new ArrayList<>();
         for (int position = 0; position < namaKelurahan.length; position++) {
             dataKesehatan data = new dataKesehatan();
-            data.setKecamatan(namaKelurahan[position]);
+            data.setKelurahan(namaKelurahan[position]);
 
             list.add(data);
         }
