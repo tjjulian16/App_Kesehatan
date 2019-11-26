@@ -1,13 +1,13 @@
 package com.example.app_kesehatan;
 
-public class dataKesehatan {
+public class DataKesehatan {
 
     String namaKeluarga,kecamatan,kelurahan,status,keterangan,alamat;
-    public dataKesehatan(){
+    public DataKesehatan(){
 
     }
 
-    public dataKesehatan(String namaKeluarga, String kecamatan, String kelurahan, String status, String keterangan, String alamat) {
+    public DataKesehatan(String namaKeluarga, String kecamatan, String kelurahan, String status, String keterangan, String alamat) {
         this.namaKeluarga = namaKeluarga;
         this.kecamatan = kecamatan;
         this.kelurahan = kelurahan;

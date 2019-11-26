@@ -17,10 +17,10 @@ public class dataKelurahan {
             "Tunjungsekar"
     };
 
-    static ArrayList<dataKesehatan> getListData() {
-        ArrayList<dataKesehatan> list = new ArrayList<>();
+    static ArrayList<DataKesehatan> getListData() {
+        ArrayList<DataKesehatan> list = new ArrayList<>();
         for (int position = 0; position < namaKelurahan.length; position++) {
-            dataKesehatan data = new dataKesehatan();
+            DataKesehatan data = new DataKesehatan();
             data.setKelurahan(namaKelurahan[position]);
 
             list.add(data);

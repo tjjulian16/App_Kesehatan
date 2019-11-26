@@ -20,7 +20,7 @@ public class lihatKecamatan extends AppCompatActivity {
         buttonKecamatan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(lihatKecamatan.this, lihatKelurahan.class);
+                Intent i = new Intent(lihatKecamatan.this, LihatKelurahan.class);
                 startActivity(i);
             }
         });

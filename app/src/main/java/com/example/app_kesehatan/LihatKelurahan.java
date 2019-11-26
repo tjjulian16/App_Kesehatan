@@ -1,7 +1,8 @@
 package com.example.app_kesehatan;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,9 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class lihatKelurahan extends AppCompatActivity {
+public class LihatKelurahan extends AppCompatActivity {
     private RecyclerView rvKelurahan;
-    private ArrayList<dataKesehatan> list = new ArrayList<>();
+    private ArrayList<DataKesehatan> list = new ArrayList<>();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_kelurahan);
@@ -25,18 +26,13 @@ public class lihatKelurahan extends AppCompatActivity {
 
     private void showRecyclerList(){
         rvKelurahan.setLayoutManager(new LinearLayoutManager(this));
-        cardKelurahanAdapter adapterKelurahan = new cardKelurahanAdapter(list);
+        CardKelurahanAdapter adapterKelurahan = new CardKelurahanAdapter(list);
         rvKelurahan.setAdapter(adapterKelurahan);
 
-      /*  adapterKelurahan.setOnItemClickCallback(new cardKelurahanAdapter.OnItemClickCallback() {
-            @Override
-            public void onItemClicked(dataKesehatan data) {
-                showKelurahan(data);
-            }
-        }); */
+
     }
 
-  /*  private void showKelurahan(dataKesehatan datakesehatan) {
+  /*  private void showKelurahan(DataKesehatan datakesehatan) {
         Toast.makeText(this, "Kamu memilih " + datakesehatan.getKelurahan(), Toast.LENGTH_SHORT).show();
     } */
 }

@@ -19,10 +19,11 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MenuUtama" />
         <activity android:name=".formIsiData" />
-        <activity android:name=".dataKesehatan" />
+        <activity android:name=".DataKesehatan" />
         <activity android:name=".inputBerhasil" />
         <activity android:name=".lihatKecamatan" />
-        <activity android:name=".lihatKelurahan" />
+        <activity android:name=".LihatKelurahan" />
+        <activity android:name=".LihatKeluarga" />
     </application>
 
 </manifest>
