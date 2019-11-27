@@ -85,18 +85,14 @@
             android:id="@+id/lihatdata"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
-
             android:layout_alignParentEnd="true"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
-
             android:fontFamily="sans-serif-medium"
             android:text="LIHAT KELURAHAN"
             android:textAlignment="center"
             android:textColor="#fff"
             android:textSize="20sp" />
-
     </RelativeLayout>
 <RelativeLayout
     android:layout_width="match_parent"
