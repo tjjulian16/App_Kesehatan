@@ -66,7 +66,7 @@
             android:id="@+id/form"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:text="@string/masukkan_data"
+            android:text="Edit Data Kesehatan"
             android:gravity="center"
 
             android:textAlignment="center"
@@ -156,8 +156,9 @@
             <EditText
                 android:id="@+id/editAlamat"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:padding="10dp"
+
                 android:layout_below="@id/Alamat"
                 android:hint="Alamat lokasi keluarga"
 
@@ -197,7 +198,7 @@
             <EditText
                 android:id="@+id/editKeterangan"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="80dp"
                 android:padding="10dp"
                 android:layout_below="@id/ket"
                 android:hint="Keterangan terkait data kesehatan"

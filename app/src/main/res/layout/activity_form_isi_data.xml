@@ -158,16 +158,27 @@
             <EditText
                 android:id="@+id/inputAlamat"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:layout_below="@id/Alamat"
                 android:hint="Alamat lokasi keluarga"
 
                 android:background="@android:drawable/editbox_dropdown_light_frame"/>
 
+            <Button
+                android:id="@+id/btnLocation"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/inputAlamat"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/buttonmenu"
+                android:gravity="center"
+                android:text="Ambil Lokasi"
+                android:textColor="@color/putih" />
+
             <TextView
                 android:id="@+id/status"
-                android:layout_below="@id/inputAlamat"
+                android:layout_below="@id/btnLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/status"
@@ -200,7 +211,7 @@
             <EditText
                 android:id="@+id/inputKeterangan"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="80dp"
                 android:padding="10dp"
                 android:layout_below="@id/ket"
                 android:hint="Keterangan terkait data kesehatan"

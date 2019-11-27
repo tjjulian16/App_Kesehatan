@@ -3,6 +3,7 @@
     package="com.example.app_kesehatan">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -11,22 +12,33 @@
         android:roundIcon="@drawable/baktihusada"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MenuUtama" />
-        <activity android:name=".formIsiData" />
-        <activity android:name=".DataKesehatan" />
-        <activity android:name=".inputBerhasil" />
-        <activity android:name=".lihatKecamatan" />
-        <activity android:name=".LihatKelurahan" />
-        <activity android:name=".LihatKeluarga" />
-        <activity android:name=".EditKeluarga" />
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MenuUtama"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FormIsiData"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DataKesehatan"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".inputBerhasil"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".lihatKecamatan"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LihatKelurahan"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LihatKeluarga"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditKeluarga"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

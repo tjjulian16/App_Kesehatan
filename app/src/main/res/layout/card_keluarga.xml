@@ -30,6 +30,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
                 android:src="@drawable/fam"
                 android:layout_marginLeft="10dp"/>
 
@@ -104,12 +105,12 @@
                     android:layout_height="match_parent">
                     <Button
                         android:id="@+id/btnLihat"
-                        android:layout_width="70dp"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/edit"
-                        android:drawableLeft="@drawable/iconview"
+                        android:backgroundTint="#4287f5"
+                        android:drawableLeft="@drawable/ic_edit"
                         android:fontFamily="sans-serif"
-                        android:text="Edit"
+
                         android:textColor="@color/putih"
                         android:textSize="10sp" />
                     <Button
