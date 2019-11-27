@@ -1,8 +1,6 @@
 package com.example.app_kesehatan;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,7 +18,7 @@ public class LihatKelurahan extends AppCompatActivity {
         rvKelurahan = findViewById(R.id.recycleKelurahan);
         rvKelurahan.setHasFixedSize(true);
 
-        list.addAll(dataKelurahan.getListData());
+        list.addAll(DataKelurahan.getListData());
         showRecyclerList();
     }
 

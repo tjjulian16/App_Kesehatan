@@ -1,6 +1,8 @@
 package com.example.app_kesehatan;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +61,26 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
             }
         });
 
+        holder.btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), EditKeluarga.class);
+
+//Create the bundle
+                Bundle bundle = new Bundle();
+
+//Add your data to bundle
+                bundle.putString("id", id);
+
+//Add the bundle to the intent
+                i.putExtras(bundle);
+
+//Fire that second activity
+
+               view.getContext().startActivity(i);
+            }
+        });
+
     }
 
 
@@ -69,16 +91,18 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
 
     class CardViewViewHolder extends RecyclerView.ViewHolder {
         TextView namaKeluarga,alamat;
-        Button btnHapus;
+        Button btnHapus,btnEdit;
 
         CardViewViewHolder(View itemView) {
             super(itemView);
             namaKeluarga = itemView.findViewById(R.id.nama_keluarga);
             alamat = itemView.findViewById(R.id.alamat);
             btnHapus = itemView.findViewById(R.id.btnHapus);
-
+            btnEdit = itemView.findViewById(R.id.btnEdit);
         }
     }
+
+
     private boolean DeleteKeluarga(String id){
         //mendapat spesifik keluarga
 

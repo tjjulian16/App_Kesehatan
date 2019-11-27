@@ -1,6 +1,6 @@
 package com.example.app_kesehatan;
 import java.util.ArrayList;
-public class dataKelurahan {
+public class DataKelurahan {
 
     private static String[] namaKelurahan = {
             "Dinoyo",
@@ -16,6 +16,10 @@ public class dataKelurahan {
             "Tunggulwulung",
             "Tunjungsekar"
     };
+
+    public static String[] getNamaKelurahan() {
+        return namaKelurahan;
+    }
 
     static ArrayList<DataKesehatan> getListData() {
         ArrayList<DataKesehatan> list = new ArrayList<>();

@@ -24,6 +24,7 @@
         <activity android:name=".lihatKecamatan" />
         <activity android:name=".LihatKelurahan" />
         <activity android:name=".LihatKeluarga" />
+        <activity android:name=".EditKeluarga" />
     </application>
 
 </manifest>
