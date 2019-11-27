@@ -51,7 +51,7 @@ public class formIsiData extends AppCompatActivity {
             if(!(namaKeluarga.isEmpty() && alamat.isEmpty()) ){
                String id =   databaseKesehatan.push().getKey();
 
-               DataKesehatan data = new DataKesehatan(namaKeluarga,kecamatan,kelurahan,status,keterangan,alamat);
+               DataKesehatan data = new DataKesehatan(id,namaKeluarga,kecamatan,kelurahan,status,keterangan,alamat);
 
                databaseKesehatan.child(id).setValue(data);
 

@@ -2,18 +2,27 @@ package com.example.app_kesehatan;
 
 public class DataKesehatan {
 
-    String namaKeluarga,kecamatan,kelurahan,status,keterangan,alamat;
+    String namaKeluarga,kecamatan,kelurahan,status,keterangan,alamat,id;
     public DataKesehatan(){
 
     }
 
-    public DataKesehatan(String namaKeluarga, String kecamatan, String kelurahan, String status, String keterangan, String alamat) {
+    public DataKesehatan(String id, String namaKeluarga, String kecamatan, String kelurahan, String status, String keterangan, String alamat) {
+        this.id = id;
         this.namaKeluarga = namaKeluarga;
         this.kecamatan = kecamatan;
         this.kelurahan = kelurahan;
         this.status = status;
         this.keterangan = keterangan;
         this.alamat = alamat;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setNamaKeluarga(String namaKeluarga) {
