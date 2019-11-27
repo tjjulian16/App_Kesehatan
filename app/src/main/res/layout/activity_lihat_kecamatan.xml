@@ -97,7 +97,7 @@
             android:id="@+id/btnKecamatanLowokwaru"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:background="@drawable/buttonmenu"
+        android:background="@drawable/buttonkecamatan"
         android:layout_marginTop="50dp"
         android:layout_gravity="center">
 
@@ -113,14 +113,14 @@
                 android:layout_alignParentBottom="true"
                 android:fontFamily="sans-serif-medium"
                 android:text="Lowokwaru"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="20dp" />
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/btnKecamatanBlimbing"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:background="@drawable/buttonmenu"
+            android:background="@drawable/buttonkecamatan"
             android:layout_marginTop="50dp"
             android:layout_gravity="center">
 
@@ -136,14 +136,14 @@
                 android:layout_alignParentBottom="true"
                 android:fontFamily="sans-serif-medium"
                 android:text="Blimbing"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="20dp" />
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/btnKecamatanKlojen"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:background="@drawable/buttonmenu"
+            android:background="@drawable/buttonkecamatan"
             android:layout_marginTop="50dp"
             android:layout_gravity="center">
 
@@ -159,14 +159,14 @@
                 android:layout_alignParentBottom="true"
                 android:fontFamily="sans-serif-medium"
                 android:text="Klojen"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="20dp" />
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/btnKecamatanSukun"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:background="@drawable/buttonmenu"
+            android:background="@drawable/buttonkecamatan"
             android:layout_marginTop="50dp"
             android:layout_gravity="center">
 
@@ -182,14 +182,14 @@
                 android:layout_alignParentBottom="true"
                 android:fontFamily="sans-serif-medium"
                 android:text="Sukun"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="20dp" />
         </RelativeLayout>
         <RelativeLayout
             android:id="@+id/btnKecamatanKedungkandang"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:background="@drawable/buttonmenu"
+            android:background="@drawable/buttonkecamatan"
             android:layout_marginTop="50dp"
             android:layout_gravity="center">
 
@@ -205,7 +205,7 @@
                 android:layout_alignParentBottom="true"
                 android:fontFamily="sans-serif-medium"
                 android:text="Kedungkandang"
-                android:textColor="#fff"
+                android:textColor="#000"
                 android:textSize="20dp" />
         </RelativeLayout>
     </LinearLayout>

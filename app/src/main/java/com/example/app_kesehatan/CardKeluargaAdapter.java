@@ -43,6 +43,7 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
 
         holder.namaKeluarga.setText(data.getNamaKeluarga());
         holder.alamat.setText(data.getAlamat());
+        holder.status.setText(data.getStatus());
         final String id = listKeluarga.get(position).getId();
 
         holder.namaKeluarga.setOnClickListener(new View.OnClickListener() {
@@ -90,12 +91,13 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
     }
 
     class CardViewViewHolder extends RecyclerView.ViewHolder {
-        TextView namaKeluarga,alamat;
+        TextView namaKeluarga,alamat, status;
         Button btnHapus,btnEdit;
 
         CardViewViewHolder(View itemView) {
             super(itemView);
             namaKeluarga = itemView.findViewById(R.id.nama_keluarga);
+            status = itemView.findViewById(R.id.isi_status);
             alamat = itemView.findViewById(R.id.alamat);
             btnHapus = itemView.findViewById(R.id.btnHapus);
             btnEdit = itemView.findViewById(R.id.btnEdit);

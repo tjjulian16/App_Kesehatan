@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     android:id="@+id/card_view_keluarga"
+
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_gravity="center_horizontal"
     android:layout_marginTop="25dp"
     app:cardElevation="6dp"
     app:cardCornerRadius="15dp"
+    app:cardBackgroundColor="#d6f5d6"
 
     xmlns:android="http://schemas.android.com/apk/res/android">
 
@@ -27,7 +30,8 @@
                 android:id="@+id/imageView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/fam_pict"/>
+                android:src="@drawable/fam"
+                android:layout_marginLeft="10dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -98,17 +102,26 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
-
+                    <Button
+                        android:id="@+id/btnLihat"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/edit"
+                        android:drawableLeft="@drawable/iconview"
+                        android:fontFamily="sans-serif"
+                        android:text="Edit"
+                        android:textColor="@color/putih"
+                        android:textSize="10sp" />
                     <Button
                         android:id="@+id/btnEdit"
-                        android:layout_width="wrap_content"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/edit"
                         android:drawableLeft="@drawable/ic_edit"
                         android:fontFamily="sans-serif"
                         android:text="Edit"
                         android:textColor="@color/putih"
-                        android:textSize="12sp" />
+                        android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/btnHapus"

@@ -105,31 +105,44 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
 
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="Password"
             android:inputType="textPassword" />
 
-        <TextView
-            android:id="@+id/daftarDisini"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
 
-            android:text="Belum terdaftar? Daftar disini"
-           />
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/shapecardview"
             android:layout_gravity="center"
 
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="20dp"
             android:text="LOGIN"
+            />
+        <TextView
+            android:id="@+id/belumdaftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+
+            android:text="Belum terdaftar?"
+            />
+        <TextView
+            android:id="@+id/daftarDisini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="#fff"
+            android:text="@string/daftardisini"
+
             />
     </LinearLayout>
 

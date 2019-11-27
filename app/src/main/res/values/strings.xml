@@ -21,5 +21,6 @@
     <string name="keterangan">Keterangan:</string>
     <string name="simpan">Simpan</string>
     <string name="template_kelurahan_x">Template Kelurahan X</string>
-
+    <string name="logindisini"><u>Login disini!</u></string>
+    <string name="daftardisini"><u>Daftar disini!</u></string>
 </resources>
