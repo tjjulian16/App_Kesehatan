@@ -65,21 +65,7 @@
         android:layout_height="40dp"
         android:orientation="vertical"
         android:background="#339933"
-        android:layout_marginTop="0dp">
-
-        <ImageView
-            android:id="@+id/btnKembali"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="13dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="348dp"
-            android:src="@drawable/arrowback" />
-    </LinearLayout>
+        android:layout_marginTop="0dp"/>
 
 
     <RelativeLayout

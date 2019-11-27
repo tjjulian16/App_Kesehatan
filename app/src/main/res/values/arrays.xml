@@ -2,7 +2,7 @@
 <resources>
     <string-array name="jenis_status_array">Sehat, Prasehat, Tidak Sehat </string-array>
     <array name="kecamatan_array">
-        <item>Blimbing</item>
+        <item>Lowokwaru</item>
     </array>
     <array name="kelurahan_array">
         <item>Jatimulyo</item>
