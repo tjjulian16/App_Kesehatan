@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.example.app_kesehatan.DataKesehatan;
+import com.example.app_kesehatan.R;
+
 import java.util.ArrayList;
 
 public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapter.CardViewViewHolder> {
