@@ -198,7 +198,7 @@
                 <TextView
                     android:id="@+id/isi_alamat"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="wrap_content"
                     android:layout_below="@id/alamat"
                     android:hint="Perum Griya Shanta"
                     android:padding="10dp"
@@ -241,7 +241,7 @@
                 <TextView
                     android:id="@+id/isi_ket"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="80dp"
                     android:layout_below="@id/ket"
                     android:hint="Sehat dong"
                     android:padding="10dp"
@@ -251,17 +251,21 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
+            android:layout_height="250dp"
+            android:layout_margin="20dp"
+
             app:cardCornerRadius="30dp"
             app:cardElevation="16dp">
 
-            <com.google.android.gms.maps.MapView
+
+            <fragment
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:id="@+id/map_keluarga"
-                android:layout_width="350dp"
-                android:layout_height="200dp"/>
+                android:layout_margin="20dp"
+                tools:context=".MapsActivity"
+                android:name="com.google.android.gms.maps.SupportMapFragment" />
         </androidx.cardview.widget.CardView>
         </LinearLayout>
     </ScrollView>

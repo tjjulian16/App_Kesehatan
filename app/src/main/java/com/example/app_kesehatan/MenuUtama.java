@@ -36,7 +36,7 @@ public class MenuUtama extends AppCompatActivity {
         menuLihatData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MenuUtama.this, lihatKecamatan.class);
+                Intent i = new Intent(MenuUtama.this, LihatKecamatan.class);
                 startActivity(i);
             }
         });

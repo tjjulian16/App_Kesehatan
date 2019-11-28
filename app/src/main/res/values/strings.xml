@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Aplikasi Pencatatan Kesehatan Kota Malang</string>
+    <string name="MAP_KEY">AIzaSyCl2YVJu39hvebJEp9Nc9VO8RQNVADpop4</string>
     <string name="dinas_kesehatan_kota_malang">Dinas Kesehatan Kota Malang</string>
     <string name="pencatatan_kesehatan">Pencatatan Kesehatan</string>
     <string name="sistem_informasi">Sistem Informasi</string>

@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class lihatKecamatan extends AppCompatActivity {
+public class LihatKecamatan extends AppCompatActivity {
 
     RelativeLayout buttonKecamatan;
 
@@ -20,7 +20,7 @@ public class lihatKecamatan extends AppCompatActivity {
         buttonKecamatan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(lihatKecamatan.this, LihatKelurahan.class);
+                Intent i = new Intent(LihatKecamatan.this, LihatKelurahan.class);
                 startActivity(i);
             }
         });

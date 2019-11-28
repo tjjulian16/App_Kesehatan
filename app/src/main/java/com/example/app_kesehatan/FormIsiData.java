@@ -32,7 +32,7 @@ public class FormIsiData extends AppCompatActivity {
 
     EditText inputNamaKeluarga, inputAlamat, inputKeterangan;
     Spinner spnKelurahan, spnKecamatan, spnStatus;
-    Button buttonSimpan;
+    Button buttonSimpan, buttonLokasi;
     private FusedLocationProviderClient fusedLocationClient;
     private final static int REQUEST_LOCATION_PERMISSION = 1;
     Geocoder geocoder;
@@ -51,15 +51,20 @@ public class FormIsiData extends AppCompatActivity {
         spnKelurahan = findViewById(R.id.spnKelurahan);
         spnStatus = findViewById(R.id.spnStatus);
         buttonSimpan = findViewById(R.id.buttonSimpan);
-
+        buttonLokasi = findViewById(R.id.btnLokasi);
         buttonSimpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 tambahDataKesehatan();
             }
         });
+        buttonLokasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getLokasi();
+            }
+        });
 
-       getLokasi();
     }
 
     private void getLokasi() {
@@ -133,17 +138,7 @@ public class FormIsiData extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if(requestCode == REQUEST_LOCATION_PERMISSION){
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
 
-            }
-            else{
-
-            }
-        }
-    }
 
     private void tambahDataKesehatan(){
         String namaKeluarga = inputNamaKeluarga.getText().toString().trim();
@@ -160,7 +155,7 @@ public class FormIsiData extends AppCompatActivity {
 
                databaseKesehatan.child(id).setValue(data);
 
-                startActivity(new Intent(FormIsiData.this, inputBerhasil.class));
+                startActivity(new Intent(FormIsiData.this, InputBerhasil.class));
             }
             else if (namaKeluarga.isEmpty()){
                 inputNamaKeluarga.setError("Harap Masukkan Nama Keluarga");

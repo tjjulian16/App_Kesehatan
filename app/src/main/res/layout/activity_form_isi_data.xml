@@ -166,7 +166,7 @@
                 android:background="@android:drawable/editbox_dropdown_light_frame"/>
 
             <Button
-                android:id="@+id/btnLocation"
+                android:id="@+id/btnLokasi"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/inputAlamat"
@@ -178,7 +178,7 @@
 
             <TextView
                 android:id="@+id/status"
-                android:layout_below="@id/btnLocation"
+                android:layout_below="@id/btnLokasi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/status"

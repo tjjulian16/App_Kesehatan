@@ -12,6 +12,8 @@
         android:roundIcon="@drawable/baktihusada"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="@string/MAP_KEY"/>
         <activity android:name=".MainActivity"
             android:screenOrientation="portrait">
 
@@ -29,15 +31,17 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".DataKesehatan"
             android:screenOrientation="portrait"/>
-        <activity android:name=".inputBerhasil"
+        <activity android:name=".InputBerhasil"
             android:screenOrientation="portrait"/>
-        <activity android:name=".lihatKecamatan"
+        <activity android:name=".LihatKecamatan"
             android:screenOrientation="portrait"/>
         <activity android:name=".LihatKelurahan"
             android:screenOrientation="portrait"/>
         <activity android:name=".LihatKeluarga"
             android:screenOrientation="portrait"/>
         <activity android:name=".EditKeluarga"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LihatProfilKeluarga"
             android:screenOrientation="portrait"/>
     </application>
 

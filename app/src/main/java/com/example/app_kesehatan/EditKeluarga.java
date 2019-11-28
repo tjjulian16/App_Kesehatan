@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -90,7 +91,7 @@ public class EditKeluarga extends AppCompatActivity {
         return index;
     }
 
-    private boolean UpdateKeluarga(String id){
+    private void UpdateKeluarga(String id){
         DatabaseReference UpdateKeluarga = FirebaseDatabase.getInstance().getReference("kesehatan").child(id);
         String namaKeluarga = editNamaKeluarga.getText().toString().trim();
         String alamat = editAlamat.getText().toString().trim();
@@ -100,6 +101,7 @@ public class EditKeluarga extends AppCompatActivity {
         String status = editStatus.getSelectedItem().toString();
         DataKesehatan Keluarga = new DataKesehatan(id,namaKeluarga,kecamatan,kelurahan, status, keterangan, alamat);
         UpdateKeluarga.setValue(Keluarga);
-        return true;
+        Toast.makeText(this, "Berhasil Update Data " + namaKeluarga, Toast.LENGTH_SHORT).show();
+
     }
 }

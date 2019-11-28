@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class inputBerhasil extends AppCompatActivity {
+public class InputBerhasil extends AppCompatActivity {
 
 
     protected void onCreate(Bundle savedInstanceState) {

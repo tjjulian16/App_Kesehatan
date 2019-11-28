@@ -44,14 +44,8 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
         holder.namaKeluarga.setText(data.getNamaKeluarga());
         holder.alamat.setText(data.getAlamat());
         holder.status.setText(data.getStatus());
-        final String id = listKeluarga.get(position).getId();
 
-        holder.namaKeluarga.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(holder.namaKeluarga.getContext(), listKeluarga.get(holder.getAdapterPosition()).getNamaKeluarga(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        final String id = listKeluarga.get(position).getId();
 
         holder.btnHapus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +53,7 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
 
                 DeleteKeluarga(id);
                 notifyItemRemoved(position);
+                Toast.makeText(holder.namaKeluarga.getContext(), "Berhasil Menghapus " + listKeluarga.get(holder.getAdapterPosition()).getNamaKeluarga() , Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -82,6 +77,26 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
             }
         });
 
+        holder.btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(view.getContext(), LihatProfilKeluarga.class);
+
+//Create the bundle
+                Bundle bundle = new Bundle();
+
+//Add your data to bundle
+                bundle.putString("id", id);
+
+//Add the bundle to the intent
+                i.putExtras(bundle);
+
+//Fire that second activity
+
+                view.getContext().startActivity(i);
+            }
+        });
+
     }
 
 
@@ -92,7 +107,7 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
 
     class CardViewViewHolder extends RecyclerView.ViewHolder {
         TextView namaKeluarga,alamat, status;
-        Button btnHapus,btnEdit;
+        Button btnView, btnHapus,btnEdit;
 
         CardViewViewHolder(View itemView) {
             super(itemView);
@@ -101,6 +116,7 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
             alamat = itemView.findViewById(R.id.alamat);
             btnHapus = itemView.findViewById(R.id.btnHapus);
             btnEdit = itemView.findViewById(R.id.btnEdit);
+            btnView = itemView.findViewById(R.id.btnLihat);
         }
     }
 
