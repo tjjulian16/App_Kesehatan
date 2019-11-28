@@ -89,8 +89,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Input Data Sukses "
-        android:textColor="#fff"
+        android:text="Input Data Sukses"
+        android:textColor="#000"
         android:textSize="30dp" />
     <Button
         android:id="@+id/btnback"
