@@ -89,9 +89,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layour_marginBottom="10dp"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/hitam"
+        android:textStyle="normal"
+        android:textColor="#000"
         android:text="Detail Profil" />
 
     <ScrollView
@@ -125,7 +127,7 @@
                     android:text="@string/nama_yang_sakit"
                     android:textColor="@color/hitam"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="italic" />
 
                 <!--isi nama-->
                 <TextView
@@ -146,7 +148,7 @@
                     android:paddingBottom="5dp"
                     android:text="@string/KecamatanText"
                     android:textColor="@color/hitam"
-                    android:textStyle="bold"
+                    android:textStyle="italic"
                     android:textSize="15sp" />
 
                 <!--isi kecamatan-->
@@ -167,7 +169,7 @@
                     android:layout_below="@id/isi_kecamatan"
                     android:layout_marginTop="15dp"
                     android:paddingBottom="5dp"
-                    android:textStyle="bold"
+                    android:textStyle="italic"
                     android:text="@string/Kelurahan"
                     android:textColor="@color/hitam"
                     android:textSize="15sp" />
@@ -190,7 +192,7 @@
                     android:layout_marginTop="15dp"
                     android:paddingBottom="5dp"
                     android:text="@string/Alamat"
-                    android:textStyle="bold"
+                    android:textStyle="italic"
                     android:textColor="@color/hitam"
                     android:textSize="15sp" />
 
@@ -212,7 +214,7 @@
                     android:layout_marginTop="15dp"
                     android:paddingBottom="5dp"
                     android:text="@string/status"
-                    android:textStyle="bold"
+                    android:textStyle="italic"
                     android:textColor="@color/hitam"
                     android:textSize="15sp" />
 
@@ -234,7 +236,7 @@
                     android:layout_marginTop="15dp"
                     android:paddingBottom="5dp"
                     android:text="@string/keterangan"
-                    android:textStyle="bold"
+                    android:textStyle="italic"
                     android:textColor="@color/hitam"
                     android:textSize="15sp" />
 

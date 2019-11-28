@@ -89,18 +89,18 @@
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Sukses! Berhasil dimasukkan"
+        android:text="Sukses! Data berhasil diedit"
         android:textColor="#fff"
         android:textSize="30dp" />
     <Button
-        android:id="@+id/btnback"
+        android:id="@+id/btnbacktodata"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:background="@drawable/shapecardview"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="< Kembali ke Menu Utama"
+        android:text="< Kembali ke Data Keluarga"
         />
 
 </LinearLayout>

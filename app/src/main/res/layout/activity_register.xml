@@ -83,7 +83,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:fontFamily="sans-serif-medium"
-            android:text="DAFTAR AKUN BARU"
+            android:text="Daftar Akun Baru"
             android:textColor="#fff"
             android:textSize="30sp"/>
 
@@ -135,7 +135,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:textStyle="bold"
-            android:textColor="#fff"
+            android:textColor="#003366"
             android:layout_gravity="center"
             android:text="@string/logindisini"
             android:textSize="18dp"
