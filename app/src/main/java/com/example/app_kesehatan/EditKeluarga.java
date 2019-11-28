@@ -1,5 +1,6 @@
 package com.example.app_kesehatan;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -99,9 +100,15 @@ public class EditKeluarga extends AppCompatActivity {
         String kecamatan = editKecamatan.getSelectedItem().toString();
         String kelurahan = editKelurahan.getSelectedItem().toString();
         String status = editStatus.getSelectedItem().toString();
+
+
+
+
         DataKesehatan Keluarga = new DataKesehatan(id,namaKeluarga,kecamatan,kelurahan, status, keterangan, alamat);
         UpdateKeluarga.setValue(Keluarga);
-        Toast.makeText(this, "Berhasil Update Data " + namaKeluarga, Toast.LENGTH_SHORT).show();
+        Intent i = new Intent(EditKeluarga.this, EditBerhasil.class);
+        EditKeluarga.this.startActivity(i);
+
 
     }
 }

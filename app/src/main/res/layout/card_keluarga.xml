@@ -109,9 +109,10 @@
                         android:layout_height="50dp"
                         android:backgroundTint="#4287f5"
                         android:drawableLeft="@drawable/iceyes"
+
                         android:fontFamily="sans-serif"
                         android:textColor="@color/putih"
-                        android:textSize="10sp" />
+                        android:textSize="1sp" />
 
                     <Button
                         android:id="@+id/btnEdit"

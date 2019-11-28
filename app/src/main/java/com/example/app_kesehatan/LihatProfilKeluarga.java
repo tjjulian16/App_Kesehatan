@@ -14,6 +14,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -32,9 +33,10 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
 
    private TextView tampilNamakeluarga, tampilKelurahan, tampilKecamatan, tampilAlamat, tampilStatus, tampilKeterangan;
     private GoogleMap mMap;
-    private LatLng koor;
-    private Double latitude, longitude;
+    private String getAlamat;
     private  DatabaseReference databaseKesehatan;
+    SupportMapFragment mapFragment;
+
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil_keluarga);
@@ -51,11 +53,8 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
         tampilKelurahan = findViewById(R.id.isi_kelurahan);
         tampilKecamatan = findViewById(R.id.isi_kecamatan);
         tampilStatus = findViewById(R.id.isi_status);
-        latitude = 28.6139391;
-        longitude = 77.2068325;
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map_keluarga);
-        mapFragment.getMapAsync(this);
+
+
 
 
     }
@@ -82,11 +81,7 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
                 tampilAlamat.setText(alamat);
                 tampilStatus.setText(status);
                 tampilKeterangan.setText(keterangan);
-
-             //  LatLng koor = getKoordinat(alamat);
-
-
-
+                getAlamat = alamat;
 
             }
 
@@ -95,39 +90,43 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
 
             }
         });
+        mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map_keluarga);
+        mapFragment.getMapAsync(this);
     }
 
-    public LatLng getKoordinat(String strAddress) {
-
-        Geocoder coder = new Geocoder(this);
-        List<Address> address;
-        LatLng koor = null;
-
-        try {
-            address = coder.getFromLocationName(strAddress, 5);
-            if (address == null) {
-                return null;
-            }
-            Address location = address.get(0);
-            location.getLatitude();
-            location.getLongitude();
-
-            koor = new LatLng( (location.getLatitude() * 1E6),
-                    (location.getLongitude() * 1E6));
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return koor;
-    }
             @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        String StrAddress = "Jalan Veteran No.8, Malang, Indonesia";
 
-       //tambah marker di lokasi alamat keluarga tersebut
-        LatLng alamat = new LatLng(latitude,longitude);
-        mMap.addMarker(new MarkerOptions().position(alamat).title("Lokasi Keluarga"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(alamat));
+                Geocoder coder = new Geocoder(this);
+                List<Address> address;
+
+
+                try {
+                    address = coder.getFromLocationName(StrAddress, 1);
+                    if (address != null && address.size()!=0) {
+
+                        Address location = address.get(0);
+
+                        LatLng alamat = new  LatLng(location.getLatitude(), location.getLongitude());
+                        mMap.addMarker(new MarkerOptions().position(alamat).title("Lokasi Keluarga"));
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(alamat,15.0f),5000, null);
+                    }
+                    else{
+                        Toast.makeText(this, "Alamat Tidak Ditemukan", Toast.LENGTH_SHORT).show();
+                    }
+
+
+
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+                //tambah marker di lokasi alamat keluarga tersebut
+
     }
 }

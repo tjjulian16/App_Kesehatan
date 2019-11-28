@@ -50,10 +50,10 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
         holder.btnHapus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Toast.makeText(holder.namaKeluarga.getContext(), "Berhasil Menghapus " + listKeluarga.get(holder.getAdapterPosition()).getNamaKeluarga() , Toast.LENGTH_SHORT).show();
                 DeleteKeluarga(id);
                 notifyItemRemoved(position);
-                Toast.makeText(holder.namaKeluarga.getContext(), "Berhasil Menghapus " + listKeluarga.get(holder.getAdapterPosition()).getNamaKeluarga() , Toast.LENGTH_SHORT).show();
+
             }
         });
 

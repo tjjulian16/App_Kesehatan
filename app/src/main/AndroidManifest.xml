@@ -41,6 +41,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".EditKeluarga"
             android:screenOrientation="portrait"/>
+        <activity android:name=".EditBerhasil"
+            android:screenOrientation="portrait"/>
         <activity android:name=".LihatProfilKeluarga"
             android:screenOrientation="portrait"/>
     </application>

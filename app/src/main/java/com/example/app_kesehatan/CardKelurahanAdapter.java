@@ -1,6 +1,7 @@
 package com.example.app_kesehatan;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,7 @@ public class CardKelurahanAdapter extends RecyclerView.Adapter<CardKelurahanAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final CardViewViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final CardViewViewHolder holder, final int position) {
         DataKesehatan data = listKelurahan.get(position);
 
 
@@ -40,6 +41,15 @@ public class CardKelurahanAdapter extends RecyclerView.Adapter<CardKelurahanAdap
             public void onClick(View view) {
                 Toast.makeText(holder.namaKelurahan.getContext(), listKelurahan.get(holder.getAdapterPosition()).getKelurahan(), Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(view.getContext(), LihatKeluarga.class);
+               final String kelurahan = listKelurahan.get(position).getKelurahan();
+                //Create the bundle
+                Bundle bundle = new Bundle();
+
+//Add your data to bundle
+                bundle.putString("kelurahan", kelurahan);
+
+//Add the bundle to the intent
+                i.putExtras(bundle);
                 view.getContext().startActivity(i);
             }
         });

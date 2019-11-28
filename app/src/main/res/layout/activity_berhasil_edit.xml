@@ -100,7 +100,7 @@
         android:background="@drawable/shapecardview"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="< Kembali ke Data Keluarga"
+        android:text=" Kembali ke Data Keluarga"
         />
 
 </LinearLayout>

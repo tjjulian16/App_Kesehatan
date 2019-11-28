@@ -89,7 +89,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Sukses! Berhasil dimasukkan"
+        android:text="Input Data Sukses "
         android:textColor="#fff"
         android:textSize="30dp" />
     <Button
@@ -100,7 +100,7 @@
         android:background="@drawable/shapecardview"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="< Kembali ke Menu Utama"
+        android:text="Kembali ke Menu Utama"
         />
 
 </LinearLayout>
