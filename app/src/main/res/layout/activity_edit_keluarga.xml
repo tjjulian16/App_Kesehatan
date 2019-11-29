@@ -164,9 +164,20 @@
 
                 android:background="@android:drawable/editbox_dropdown_light_frame"/>
 
+            <Button
+                android:id="@+id/btnLokasiUpdate"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editAlamat"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/buttonmenu"
+                android:gravity="center"
+                android:text="Ambil Lokasi"
+                android:textColor="@color/putih" />
+
             <TextView
                 android:id="@+id/status"
-                android:layout_below="@id/editAlamat"
+                android:layout_below="@id/btnLokasiUpdate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/status"

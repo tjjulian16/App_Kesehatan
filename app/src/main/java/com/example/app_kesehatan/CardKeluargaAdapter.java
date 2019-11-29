@@ -46,6 +46,7 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
         holder.status.setText(data.getStatus());
 
         final String id = listKeluarga.get(position).getId();
+        final String alamat = listKeluarga.get(position).getAlamat();
 
         holder.btnHapus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,6 +88,7 @@ public class CardKeluargaAdapter extends RecyclerView.Adapter<CardKeluargaAdapte
 
 //Add your data to bundle
                 bundle.putString("id", id);
+                bundle.putString("alamat", alamat);
 
 //Add the bundle to the intent
                 i.putExtras(bundle);

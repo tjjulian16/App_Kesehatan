@@ -45,6 +45,7 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
 //Extract the data…
 
         final String id = bundle.getString("id");
+        getAlamat = bundle.getString("alamat");
         databaseKesehatan = FirebaseDatabase.getInstance().getReference().child("kesehatan/"+id);
 
         tampilNamakeluarga = findViewById(R.id.isi_nama_keluarga);
@@ -81,7 +82,7 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
                 tampilAlamat.setText(alamat);
                 tampilStatus.setText(status);
                 tampilKeterangan.setText(keterangan);
-                getAlamat = alamat;
+
 
             }
 
@@ -98,7 +99,7 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
             @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        String StrAddress = "Jalan Veteran No.8, Malang, Indonesia";
+        String StrAddress = getAlamat;
 
                 Geocoder coder = new Geocoder(this);
                 List<Address> address;
