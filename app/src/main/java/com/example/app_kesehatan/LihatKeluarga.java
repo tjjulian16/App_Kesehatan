@@ -1,6 +1,8 @@
 package com.example.app_kesehatan;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,6 +30,7 @@ public class LihatKeluarga extends AppCompatActivity {
     private CardKeluargaAdapter cardKeluargaAdapter;
     String kel;
 
+
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_keluarga);
@@ -36,6 +39,7 @@ public class LihatKeluarga extends AppCompatActivity {
         rvKeluarga =  findViewById(R.id.recycleKeluarga);
         rvKeluarga.setHasFixedSize(true);
         rvKeluarga.setLayoutManager(new LinearLayoutManager(this));
+        new Keluarga().execute();
     }
 
     @Override
@@ -43,29 +47,67 @@ public class LihatKeluarga extends AppCompatActivity {
         super.onStart();
         Bundle bundle = getIntent().getExtras();
         kel = bundle.getString("kelurahan");
-        Query query = FirebaseDatabase.getInstance().getReference("kesehatan")
-                .orderByChild("kelurahan").equalTo(kel);
+        new Keluarga().execute();
 
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                listKeluarga.clear();
+    }
 
-                for(DataSnapshot dataKeluarga : dataSnapshot.getChildren()){
-                    DataKesehatan data = dataKeluarga.getValue(DataKesehatan.class);
-                    listKeluarga.add(data);
+    class Keluarga extends AsyncTask<String, Void, String>{
+
+        @Override
+        protected String doInBackground(String... strings) {
+            Query query = FirebaseDatabase.getInstance().getReference("kesehatan")
+                    .orderByChild("kelurahan").equalTo(kel);
+
+            query.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    listKeluarga.clear();
+
+                    for(DataSnapshot dataKeluarga : dataSnapshot.getChildren()){
+                        DataKesehatan data = dataKeluarga.getValue(DataKesehatan.class);
+                        listKeluarga.add(data);
+                    }
+                    cardKeluargaAdapter = new CardKeluargaAdapter(LihatKeluarga.this, listKeluarga);
+                    rvKeluarga.setAdapter(cardKeluargaAdapter);
+
+
                 }
-                cardKeluargaAdapter = new CardKeluargaAdapter(LihatKeluarga.this, listKeluarga);
-                rvKeluarga.setAdapter(cardKeluargaAdapter);
 
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                }
+            });
+            return kel;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            findViewById(R.id.loader).setVisibility(View.VISIBLE);
+            findViewById(R.id.container_keluarga).setVisibility(View.GONE);
+
+        }
+
+        @Override
+        protected void onPostExecute(String kelurahan) {
+            super.onPostExecute(kelurahan);
+
+           if(!listKeluarga.isEmpty()){
+                Toast.makeText(LihatKeluarga.this, "Menampilkan Data "+kelurahan, Toast.LENGTH_LONG).show();
+               findViewById(R.id.loader).setVisibility(View.GONE);
+               findViewById(R.id.container_keluarga).setVisibility(View.VISIBLE);
+            }
+            else{
+               findViewById(R.id.loader).setVisibility(View.GONE);
+               findViewById(R.id.container_keluarga).setVisibility(View.GONE);
+                Toast.makeText(LihatKeluarga.this, "Data Tidak Ditemukan", Toast.LENGTH_SHORT).show();
             }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
+
+        }
     }
 
     @Override
@@ -73,32 +115,7 @@ public class LihatKeluarga extends AppCompatActivity {
         super.onResume();
         Bundle bundle = getIntent().getExtras();
         kel = bundle.getString("kelurahan");
-        Query query = FirebaseDatabase.getInstance().getReference("kesehatan")
-                .orderByChild("kelurahan").equalTo(kel);
-
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                listKeluarga.clear();
-
-                for (DataSnapshot dataKeluarga : dataSnapshot.getChildren()) {
-                    DataKesehatan data = dataKeluarga.getValue(DataKesehatan.class);
-                    listKeluarga.add(data);
-                }
-                if(listKeluarga.size() == 0){
-                    Toast.makeText(LihatKeluarga.this, "Data Tidak Ditemukan", Toast.LENGTH_LONG).show();
-                }
-                cardKeluargaAdapter = new CardKeluargaAdapter(LihatKeluarga.this, listKeluarga);
-                rvKeluarga.setAdapter(cardKeluargaAdapter);
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
+       new Keluarga().execute();
     }
 
 

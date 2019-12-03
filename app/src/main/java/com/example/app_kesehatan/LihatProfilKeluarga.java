@@ -55,9 +55,6 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
         tampilKecamatan = findViewById(R.id.isi_kecamatan);
         tampilStatus = findViewById(R.id.isi_status);
 
-
-
-
     }
 
     @Override
