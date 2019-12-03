@@ -22,6 +22,7 @@ public class LihatKelurahan extends AppCompatActivity {
         showRecyclerList();
     }
 
+
     private void showRecyclerList(){
         rvKelurahan.setLayoutManager(new LinearLayoutManager(this));
         CardKelurahanAdapter adapterKelurahan = new CardKelurahanAdapter(list);

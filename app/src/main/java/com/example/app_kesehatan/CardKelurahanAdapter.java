@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -36,10 +37,10 @@ public class CardKelurahanAdapter extends RecyclerView.Adapter<CardKelurahanAdap
 
         holder.namaKelurahan.setText(data.getKelurahan());
 
-        holder.namaKelurahan.setOnClickListener(new View.OnClickListener() {
+        holder.dataKelurahan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(holder.namaKelurahan.getContext(), listKelurahan.get(holder.getAdapterPosition()).getKelurahan(), Toast.LENGTH_SHORT).show();
+
                 Intent i = new Intent(view.getContext(), LihatKeluarga.class);
                final String kelurahan = listKelurahan.get(position).getKelurahan();
                 //Create the bundle
@@ -63,10 +64,12 @@ public class CardKelurahanAdapter extends RecyclerView.Adapter<CardKelurahanAdap
 
      class CardViewViewHolder extends RecyclerView.ViewHolder {
        TextView namaKelurahan;
+       CardView dataKelurahan;
 
         CardViewViewHolder(View itemView) {
             super(itemView);
             namaKelurahan = itemView.findViewById(R.id.templateKelurahan);
+            dataKelurahan = itemView.findViewById(R.id.card_view_kelurahan);
 
 
         }

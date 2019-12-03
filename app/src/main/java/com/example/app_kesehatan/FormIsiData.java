@@ -70,13 +70,13 @@ public class FormIsiData extends AppCompatActivity {
     private void getLokasi() {
         //NGECEK DULU APAKAH DIA UDAH ACCEPT BELOM
         if (ContextCompat.checkSelfPermission(FormIsiData.this,
-                Manifest.permission.ACCESS_COARSE_LOCATION)
+                Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
             //KALO BELOM MASUK KE SINI
             // Permission is not granted
             // Should we show an explanation?
             if (ActivityCompat.shouldShowRequestPermissionRationale(FormIsiData.this,
-                    Manifest.permission.ACCESS_COARSE_LOCATION)) {
+                    Manifest.permission.ACCESS_FINE_LOCATION)) {
                 // Show an explanation to the user *asynchronously* -- don't block
                 // this thread waiting for the user's response! After the user
                 // sees the explanation, try again to request the permission.
@@ -89,7 +89,7 @@ public class FormIsiData extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 ActivityCompat.requestPermissions(FormIsiData.this,
-                                        new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                                         REQUEST_LOCATION_PERMISSION);
                             }
                         }).setNegativeButton("NGGA DEH", new DialogInterface.OnClickListener() {
@@ -102,7 +102,7 @@ public class FormIsiData extends AppCompatActivity {
                 // No explanation needed; request the permission
                 // (INI TUH INTINYA DIA MINTA PERMISSION KE USER TERKAIT LOCATION ACCESS)
                 ActivityCompat.requestPermissions(FormIsiData.this,
-                        new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                        new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                         REQUEST_LOCATION_PERMISSION);
 
 
