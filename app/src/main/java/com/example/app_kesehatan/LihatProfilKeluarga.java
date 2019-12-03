@@ -31,7 +31,7 @@ import java.util.List;
 
 public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyCallback {
 
-   private TextView tampilNamakeluarga, tampilKelurahan, tampilKecamatan, tampilAlamat, tampilStatus, tampilKeterangan;
+    private TextView tampilNamakeluarga, tampilKelurahan, tampilKecamatan, tampilAlamat, tampilStatus, tampilKeterangan;
     private GoogleMap mMap;
     private String getAlamat;
     private  DatabaseReference databaseKesehatan;
@@ -93,38 +93,38 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
         mapFragment.getMapAsync(this);
     }
 
-            @Override
+    @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         String StrAddress = getAlamat;
 
-                Geocoder coder = new Geocoder(this);
-                List<Address> address;
+        Geocoder coder = new Geocoder(this);
+        List<Address> address;
 
 
-                try {
-                    address = coder.getFromLocationName(StrAddress, 1);
-                    if (address != null && address.size()!=0) {
+        try {
+            address = coder.getFromLocationName(StrAddress, 1);
+            if (address != null && address.size()!=0) {
 
-                        Address location = address.get(0);
+                Address location = address.get(0);
 
-                        LatLng alamat = new  LatLng(location.getLatitude(), location.getLongitude());
-                        mMap.addMarker(new MarkerOptions().position(alamat).title("Lokasi Keluarga"));
-                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(alamat,15.0f),5000, null);
-                    }
-                    else{
-                        Toast.makeText(this, "Alamat Tidak Ditemukan", Toast.LENGTH_SHORT).show();
-                    }
-
-
+                LatLng alamat = new  LatLng(location.getLatitude(), location.getLongitude());
+                mMap.addMarker(new MarkerOptions().position(alamat).title("Lokasi Keluarga"));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(alamat,15.0f),5000, null);
+            }
+            else{
+                Toast.makeText(this, "Alamat Tidak Ditemukan", Toast.LENGTH_SHORT).show();
+            }
 
 
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
 
 
-                //tambah marker di lokasi alamat keluarga tersebut
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        //tambah marker di lokasi alamat keluarga tersebut
 
     }
 }
