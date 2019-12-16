@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class InputBerhasil extends AppCompatActivity {
 
     Button btnback;
+    ImageView homeBtn;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_berhasil_input);
@@ -21,6 +22,15 @@ public class InputBerhasil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(InputBerhasil.this,MenuUtama.class));
+            }
+        });
+
+        homeBtn = findViewById(R.id.home);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent home = new Intent(InputBerhasil.this, MenuUtama.class);
+                startActivity(home);
             }
         });
     }

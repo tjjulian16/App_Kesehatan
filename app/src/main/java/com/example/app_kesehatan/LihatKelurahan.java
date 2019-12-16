@@ -1,6 +1,11 @@
 package com.example.app_kesehatan;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,6 +15,7 @@ import java.util.ArrayList;
 
 public class LihatKelurahan extends AppCompatActivity {
     private RecyclerView rvKelurahan;
+    private ImageView homeBtn;
     private ArrayList<DataKesehatan> list = new ArrayList<>();
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +23,14 @@ public class LihatKelurahan extends AppCompatActivity {
 
         rvKelurahan = findViewById(R.id.recycleKelurahan);
         rvKelurahan.setHasFixedSize(true);
-
+        homeBtn = findViewById(R.id.home);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent home = new Intent(LihatKelurahan.this, MenuUtama.class);
+                startActivity(home);
+            }
+        });
         list.addAll(DataKelurahan.getListData());
         showRecyclerList();
     }
@@ -31,7 +44,5 @@ public class LihatKelurahan extends AppCompatActivity {
 
     }
 
-  /*  private void showKelurahan(DataKesehatan datakesehatan) {
-        Toast.makeText(this, "Kamu memilih " + datakesehatan.getKelurahan(), Toast.LENGTH_SHORT).show();
-    } */
+
 }

@@ -1,6 +1,9 @@
 package com.example.app_kesehatan;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,12 +30,21 @@ public class LihatKeluarga extends AppCompatActivity {
     private ArrayList<DataKesehatan> listKeluarga = new ArrayList<>();
     private CardKeluargaAdapter cardKeluargaAdapter;
     String kel;
+    private ImageView homeBtn;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_keluarga);
         Bundle bundle = getIntent().getExtras();
         kel = bundle.getString("kelurahan");
+        homeBtn = findViewById(R.id.home);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent home = new Intent(LihatKeluarga.this, MenuUtama.class);
+                startActivity(home);
+            }
+        });
         rvKeluarga =  findViewById(R.id.recycleKeluarga);
         rvKeluarga.setHasFixedSize(true);
         rvKeluarga.setLayoutManager(new LinearLayoutManager(this));

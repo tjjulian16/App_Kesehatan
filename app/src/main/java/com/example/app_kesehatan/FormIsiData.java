@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -37,12 +38,20 @@ public class FormIsiData extends AppCompatActivity {
     private final static int REQUEST_LOCATION_PERMISSION = 1;
     Geocoder geocoder;
     List<Address> listAlamat;
+    ImageView homeBtn;
 
     DatabaseReference databaseKesehatan;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_isi_data);
-
+        homeBtn = findViewById(R.id.home);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent home = new Intent(FormIsiData.this, MenuUtama.class);
+                startActivity(home);
+            }
+        });
         databaseKesehatan = FirebaseDatabase.getInstance().getReference("kesehatan");
         inputNamaKeluarga = findViewById(R.id.inputNamaKeluarga);
         inputAlamat = findViewById(R.id.inputAlamat);

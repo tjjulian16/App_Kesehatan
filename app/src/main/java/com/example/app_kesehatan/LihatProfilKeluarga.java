@@ -1,6 +1,7 @@
 package com.example.app_kesehatan;
 
 
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +36,7 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
 
     private TextView tampilNamakeluarga, tampilKelurahan, tampilKecamatan, tampilAlamat, tampilStatus, tampilKeterangan;
     private GoogleMap mMap;
+    private ImageView btnHome;
     private String getAlamat;
     private  DatabaseReference databaseKesehatan;
     SupportMapFragment mapFragment;
@@ -43,7 +47,15 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
         Bundle bundle = getIntent().getExtras();
 
 //Extract the data…
+        btnHome = findViewById(R.id.home);
 
+        btnHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent home = new Intent(LihatProfilKeluarga.this, MenuUtama.class);
+                startActivity(home);
+            }
+        });
         final String id = bundle.getString("id");
         getAlamat = bundle.getString("alamat");
         databaseKesehatan = FirebaseDatabase.getInstance().getReference().child("kesehatan/"+id);
@@ -61,18 +73,22 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
     protected void onStart() {
         super.onStart();
 
-        databaseKesehatan.addValueEventListener(new ValueEventListener() {
+        databaseKesehatan.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 DataKesehatan dataProfil =  dataSnapshot.getValue(DataKesehatan.class);
 
+                String namaKeluarga=null, kecamatan = null, alamat = null, kelurahan = null, keterangan = null, status =null;
 
-                String namaKeluarga = dataProfil.getNamaKeluarga();
-                String kecamatan = dataProfil.getKecamatan();
-                String alamat = dataProfil.getAlamat();
-                String kelurahan = dataProfil.getKelurahan();
-                String keterangan = dataProfil.getKeterangan();
-                String status = dataProfil.getStatus();
+                if(dataProfil != null){
+                    namaKeluarga = dataProfil.getNamaKeluarga();
+                    kecamatan = dataProfil.getKecamatan();
+                    alamat = dataProfil.getAlamat();
+                    kelurahan = dataProfil.getKelurahan();
+                    keterangan = dataProfil.getKeterangan();
+                    status = dataProfil.getStatus();
+                }
+
                 tampilNamakeluarga.setText(namaKeluarga);
                 tampilKecamatan.setText(kecamatan);
                 tampilKelurahan.setText(kelurahan);
@@ -91,6 +107,12 @@ public class LihatProfilKeluarga extends FragmentActivity implements OnMapReadyC
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map_keluarga);
         mapFragment.getMapAsync(this);
+    }
+
+    @Override
+    protected void onPause() {
+        finish();
+        super.onPause();
     }
 
     @Override

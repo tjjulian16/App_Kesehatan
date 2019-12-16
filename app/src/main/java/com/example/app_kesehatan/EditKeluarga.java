@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -42,6 +43,7 @@ public class EditKeluarga extends AppCompatActivity {
     private final static int REQUEST_LOCATION_PERMISSION = 1;
     Geocoder geocoder;
     List<Address> listAlamat;
+    ImageView homeBtn;
 
     DatabaseReference databaseKesehatan;
     protected void onCreate(Bundle savedInstanceState){
@@ -49,6 +51,14 @@ public class EditKeluarga extends AppCompatActivity {
         setContentView(R.layout.activity_edit_keluarga);
         Bundle bundle = getIntent().getExtras();
 
+        homeBtn = findViewById(R.id.home);
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent home = new Intent(EditKeluarga.this, MenuUtama.class);
+                startActivity(home);
+            }
+        });
 //Extract the data…
 
        final String id = bundle.getString("id");
@@ -109,6 +119,12 @@ public class EditKeluarga extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void onPause() {
+        finish();
+        super.onPause();
     }
 
     private int getIndex(Spinner spinner, String string ){
