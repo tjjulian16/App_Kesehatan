@@ -80,7 +80,7 @@ public class EditKeluarga extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        databaseKesehatan.addValueEventListener(new ValueEventListener() {
+        databaseKesehatan.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 DataKesehatan dataEdit =  dataSnapshot.getValue(DataKesehatan.class);
