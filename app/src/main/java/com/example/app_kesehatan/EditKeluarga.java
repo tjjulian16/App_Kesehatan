@@ -86,12 +86,16 @@ public class EditKeluarga extends AppCompatActivity {
                 DataKesehatan dataEdit =  dataSnapshot.getValue(DataKesehatan.class);
 
 
-                String namaKeluarga = dataEdit.getNamaKeluarga();
+                String namaKeluarga = null,alamat = null,kelurahan = null,keterangan =null ,status=null;
+                if (dataEdit != null) {
+                    namaKeluarga = dataEdit.getNamaKeluarga();
 
-                String alamat = dataEdit.getAlamat();
-                String kelurahan = dataEdit.getKelurahan();
-                String keterangan = dataEdit.getKeterangan();
-                String status = dataEdit.getStatus();
+                    alamat = dataEdit.getAlamat();
+                    kelurahan = dataEdit.getKelurahan();
+                    keterangan = dataEdit.getKeterangan();
+                    status = dataEdit.getStatus();
+                }
+
                 editKelurahan.setSelection(getIndex(editKelurahan,kelurahan));
                 editStatus.setSelection(getIndex(editStatus,status));
                 editNamaKeluarga.setText(namaKeluarga);
